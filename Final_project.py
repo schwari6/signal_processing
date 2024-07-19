@@ -137,6 +137,7 @@ def main():
     #1 - signal
     a_n = np.zeros(N,dtype=complex)
     a_n[np.abs(n_vector) < 100] = 1 #window function rect[n]<100
+    
     plot(n_vector,a_n,'plot of a[n]','n','Amplitude')
     
     #2 - furier series coefficients
@@ -362,8 +363,6 @@ def main():
     i = 0
     while i < N:
         a_n_unUniform_decimation[i] = a_n[i]
-        #l = 1 if k==1 else 2 if k==2 else 3
-        #i+=l
         i+=k
         k = 2 if k==1 else 3 if k==2 else 1
 
